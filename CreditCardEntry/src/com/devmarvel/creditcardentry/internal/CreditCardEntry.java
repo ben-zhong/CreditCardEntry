@@ -272,18 +272,18 @@ public class CreditCardEntry extends HorizontalScrollView implements
         if (animateOnError) {
             Animation shake = AnimationUtils.loadAnimation(context, R.anim.shake);
             field.startAnimation(shake);
-        }
 
-        field.setTextColor(Color.RED);
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (textColor != null) {
-                    field.setTextColor(textColor);
+            field.setTextColor(Color.RED);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (textColor != null) {
+                        field.setTextColor(textColor);
+                    }
                 }
-            }
-        }, 1000);
+            }, 1000);
+        }
     }
 
     @Override
